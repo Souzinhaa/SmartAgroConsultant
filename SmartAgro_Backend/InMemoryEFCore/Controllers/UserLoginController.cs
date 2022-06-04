@@ -22,7 +22,7 @@ namespace InMemoryEFCore.Controllers
 
             // GET api/userLogin
             [HttpGet]
-            public ActionResult<UserReturnModel> Get(string name, string senha)
+            public ActionResult<UserDefModel> Get(string name, string senha)
             {
                 try {
 
@@ -31,12 +31,13 @@ namespace InMemoryEFCore.Controllers
                     
                     senha = ExtensionsMethods.DecodeBase64(senha);
 
-                    UserLoginModel userLoginTeste = new UserLoginModel();
-                    
-                    userLoginTeste = _context.UserLogin.FirstOrDefault(usert => usert.name == name);
+                    UserLoginModel userLogin = new UserLoginModel();             
 
-                    if (userLoginTeste != null && senha == userLoginTeste.senha)
-                        return new UserReturnModel(userLoginTeste.id, userLoginTeste.name);
+                    userLogin = _context.UserLogin.FirstOrDefault(usert => usert.name == name);
+
+                    if (userLogin != null && senha == userLogin.senha) {
+                        return _context.UserDef.FirstOrDefault(usert => usert.id == userLogin.id);
+                    }
 
                 }
                 catch (Exception e) 

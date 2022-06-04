@@ -36,6 +36,22 @@ namespace InMemoryEFCore.Utils
                         senha = "hyangay"
                     });
 
+                context.UserDef.AddRange(
+                    new UserDefModel()
+                    {
+                        id = 1,
+                        nome = "Felipe Corbanezi",
+                        email = "felipecorbanezi@alunos.fho.edu.br",
+                        visibilidade = true
+                    },
+                    new UserDefModel()
+                    {
+                        id = 2,
+                        nome = "hyanvin",
+                        email = "hyan@alunos.fho.edu.br",
+                        visibilidade = false
+                    });
+
                 context.SaveChanges();
             }
         }
