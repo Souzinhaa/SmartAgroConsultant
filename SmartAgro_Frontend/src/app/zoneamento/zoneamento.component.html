@@ -1,0 +1,67 @@
+<app-header></app-header>
+<main class="menu-produtividade">
+    <div class="form-style-10">
+        
+        <h1>Zoneamento</h1>
+        <form>
+            <div class="section"><span>Z</span></div>
+            <div class="inner-wrap">
+                <label>Cultura<input type="text" name="cultura" /></label>
+                <label>Cidade</label>
+                <input type="text" name="municipio" />
+                <label>Risco</label>
+                <input type="number" name="risco" />
+            </div>
+            <div class="button-section">
+                <input type="submit" name="Sign Up" />
+                <span class="privacy-policy">
+                <input type="checkbox" name="field7" required> Estou de acordo com os termos de política. 
+                </span>
+               </div>
+            <div class="section"><span>M</span></div>
+            <div class="inner-wrap">
+                <img src="assets/img/goias.png">
+                <table border="1" style="width: 100%;">
+                    <tr>
+                        <td>Município</td>
+                        <td>Uf</td>
+                        <td>Cultura</td>
+                        <td>Ciclo</td>
+                        <td>Solo</td>
+                        <td>Dia início</td>
+                        <td>Mes início</td>
+                        <td>Dia Fim</td>
+                        <td>Mes Fim</td>
+                        <td>Safra início</td>
+                        <td>Safra Fim</td>
+                        <td>Risco (%)</td>
+                    </tr>
+                    <tr *ngFor="let zoneamento of zoneamentosEmbrapa.data">
+                        <td>{{zoneamento.municipio}}</td>
+                        <td>{{zoneamento.uf}}</td>
+                        <td>{{zoneamento.cultura}}</td>
+                        <td>{{zoneamento.ciclo}}</td>
+                        <td>{{zoneamento.solo}}</td>
+                        <td>{{zoneamento.diaIni}}</td>
+                        <td>{{zoneamento.mesIni}}</td>
+                        <td>{{zoneamento.diaFim}}</td>
+                        <td>{{zoneamento.mesFim}}</td>
+                        <td>{{zoneamento.safraIni}}</td>
+                        <td>{{zoneamento.safraFim}}</td>
+                        <td>{{zoneamento.risco}}</td>
+                    </tr>
+                </table>
+                <p><b>Cidade/Estado:</b> Formosa - GO</p>
+                <p><b>Grão:</b> Soja</p>
+                <p><b>Ciclo:</b> Grupo I</p>
+                <p><b>Solo:</b> Ardiloso</p>
+                <p><b>Data Início Safra:</b> 21/10/2018</p>
+                <p><b>Data Fim Safra:</b> 31/10/2019</p>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><b>20%</b></div>
+                </div>
+            </div>
+        </form>
+        </div>
+</main>
+<app-footer></app-footer>

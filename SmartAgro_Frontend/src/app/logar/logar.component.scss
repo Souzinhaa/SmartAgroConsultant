@@ -1,0 +1,79 @@
+
+
+.fundo_img{
+	width: 100%;
+	filter: blur(2px);
+
+}
+.div_img{
+	position: absolute;
+	display: block;
+}
+.img-menu{
+	height: 10px;
+	margin-left: 1500px;
+	margin-top: -400px;
+}
+
+.login{
+	align-items: center;
+	text-align: center;
+}
+
+.tela_login{
+	width: 40%;
+	height: 500px;
+	background-color: rgba(0,0,0,0.3);
+	margin: 70px auto;
+	top: 30px;
+	position: relative;
+}
+
+.login_usu{
+	
+	margin-top: 190px;
+	border: none;
+	border-bottom: 2px solid white;
+	outline: 0;
+	background: transparent;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 70%;
+}
+
+.senha_usu{
+	
+	margin-top: 80px;
+	border: none;
+	border-bottom: 2px solid white;
+	outline: 0;
+	background: transparent;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 70%;
+}
+.botao{
+	width: 70%;
+	height: 30px;
+	background-color: #515178;
+	margin-top: 55px;
+	color: white;
+}
+.Login_label{
+	color: white;
+	margin-bottom: -1000px;
+}
+.img{
+	position: absolute;
+	right: 40%;
+	top: 2%;
+	height: 80px;
+	width: 200px;;
+
+}
+.btn{
+	margin: 10%;
+	height: 40px;
+	width: 50%;
+	background-color: #8ecf7a
+}
