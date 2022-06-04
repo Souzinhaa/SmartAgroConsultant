@@ -27,145 +27,145 @@ namespace InMemoryEFCore.Utils
                     {
                         id = 1000,
                         nome = "AC",
-                        url = ""
-                    }, 
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Acre_in_Brazil.svg/300px-Acre_in_Brazil.svg.png"
+                    },
                     new ImageModel()
                     {
                         id = 1001,
                         nome = "AL",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Alagoas_in_Brazil.svg/300px-Alagoas_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1002,
                         nome = "AP",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Amapa_in_Brazil.svg/300px-Amapa_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1003,
                         nome = "AM",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Amazonas_in_Brazil.svg/300px-Amazonas_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1004,
                         nome = "BA",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Bahia_in_Brazil.svg/300px-Bahia_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1005,
                         nome = "CE",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Ceara_in_Brazil.svg/300px-Ceara_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1006,
                         nome = "DF",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Distrito_Federal_in_Brazil.svg/300px-Distrito_Federal_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1007,
                         nome = "ES",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Espirito_Santo_in_Brazil.svg/300px-Espirito_Santo_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1008,
                         nome = "GO",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Goias_in_Brazil.svg/300px-Goias_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1009,
                         nome = "MA",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Maranhao_in_Brazil.svg/300px-Maranhao_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1010,
                         nome = "MT",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Mato_Grosso_in_Brazil.svg/300px-Mato_Grosso_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1011,
                         nome = "MS",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Mato_Grosso_do_Sul_in_Brazil.svg/300px-Mato_Grosso_do_Sul_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1012,
                         nome = "MG",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Minas_Gerais_in_Brazil.svg/300px-Minas_Gerais_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1013,
                         nome = "PA",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Para_in_Brazil.svg/300px-Para_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1014,
                         nome = "PB",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Paraiba_in_Brazil.svg/300px-Paraiba_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1015,
                         nome = "PR",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Parana_in_Brazil.svg/300px-Parana_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1016,
                         nome = "PE",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Pernambuco_in_Brazil.svg/300px-Pernambuco_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1017,
                         nome = "PI",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Piaui_in_Brazil.svg/300px-Piaui_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1018,
                         nome = "RJ",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Rio_de_Janeiro_in_Brazil.svg/300px-Rio_de_Janeiro_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1019,
                         nome = "RN",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Rio_Grande_do_Norte_in_Brazil.svg/300px-Rio_Grande_do_Norte_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1020,
                         nome = "RS",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Rio_Grande_do_Sul_in_Brazil.svg/300px-Rio_Grande_do_Sul_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1021,
                         nome = "RO",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Rondonia_in_Brazil.svg/300px-Rondonia_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1022,
                         nome = "RR",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Roraima_in_Brazil.svg/300px-Roraima_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1023,
                         nome = "SC",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Santa_Catarina_in_Brazil.svg/300px-Santa_Catarina_in_Brazil.svg.png "
                     },
                     new ImageModel()
                     {
@@ -177,13 +177,13 @@ namespace InMemoryEFCore.Utils
                     {
                         id = 1025,
                         nome = "SE",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Sergipe_in_Brazil.svg/300px-Sergipe_in_Brazil.svg.png"
                     },
                     new ImageModel()
                     {
                         id = 1026,
                         nome = "TO",
-                        url = ""
+                        url = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Tocantins_in_Brazil.svg/300px-Tocantins_in_Brazil.svg.png"
                     });
 
                 context.CultivarsImage.AddRange(
