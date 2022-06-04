@@ -15,9 +15,10 @@ namespace InMemoryEFCore
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
-                var context = services.GetRequiredService<UserLoginDBContext>();
+                //var context = services.GetRequiredService<UserLoginDBContext>();
 
                 UserGenerator.Initialize(services);
+                StateImageGenerator.Initialize(services);
             }
 
             host.Run();

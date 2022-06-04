@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InMemoryEFCore.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("smartagro/[controller]")]
     [ApiController]
     public class UserLoginController : ControllerBase
     {
@@ -56,8 +56,8 @@ namespace InMemoryEFCore.Controllers
                 return Unauthorized();
             }
 
-        // GET api/userLogin/1
-        [HttpGet("{id}")]
+            // GET api/userLogin/1
+            [HttpGet("{id}")]
             public ActionResult<UserLoginModel> Get(int id)
             {
                 return _context.UserLogin.FirstOrDefault(usert => usert.id == id);
