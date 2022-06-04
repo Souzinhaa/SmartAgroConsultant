@@ -79,8 +79,8 @@ namespace InMemoryEFCore.Controllers
                 return BadRequest();
             }
 
-                // GET api/userLogin/1
-                [HttpGet("user/{id}")]
+            // GET api/userLogin/1
+            [HttpGet("user/{id}")]
             public ActionResult<UserLoginModel> Get(int id)
             {
                 return _context.UserLogin.FirstOrDefault(usert => usert.id == id);
