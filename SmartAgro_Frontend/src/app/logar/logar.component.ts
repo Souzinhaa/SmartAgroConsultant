@@ -1,8 +1,8 @@
 import { LoginService } from './../service/login.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { LoginModel } from '../model/login.model';
-import { Router } from '@angular/router';
 import { ClientModel } from '../model/cliente.model';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,25 +14,27 @@ export class LogarComponent implements OnInit {
 
   login: LoginModel = {email: "", senha: ""}
   cliente: ClientModel = {}
+  @Output() dadosCliente = new EventEmitter<string>(); //  @Output(alias) propertyName = ...
 
   constructor(private LoginService: LoginService, private router: Router) { }
 
   ngOnInit(): void { }
 
   entrar(): void{
+    this.login.senha = btoa(this.login.senha)
+    if(this.login.email != "" && this.login.senha != "")
+      this.LoginService.entrar(this.login).subscribe(cliente => {
+        this.cliente = cliente
+        this.dadosCliente.emit("Deu Certo");
+        this.router.navigate(['/menu']);
 
-    //var string = 'Hello World!';
-    // Encode the String
-    //var encodedString = btoa(string); 
-    //console.log(encodedString); // Outputs: "SGVsbG8gV29ybGQh"  
-    // Decode the String
-    //var decodedString = atob('encodedString');
-    //console.log(decodedString); // Outputs: "Hello World!"
-    
-    this.LoginService.entrar(this.login.email, btoa(this.login.senha)).subscribe(cliente => {
-      this.cliente = cliente
-      console.log(cliente)
-    });
+      }, e => {
+        alert(this.LoginService.erro(e.status))
+      })
+    else if(this.login.email == "")
+      alert("Preencha o Nome de usuário!!")
+    else if(this.login.senha == "")
+      alert("Preencha a Senha de usuário!!")
   }
 
 }
