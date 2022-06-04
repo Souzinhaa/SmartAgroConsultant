@@ -94,7 +94,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/smartagro/image/state/MG",
+							"raw": "https://localhost:5001/smartagro/image/state/SP",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -104,7 +104,7 @@
 								"smartagro",
 								"image",
 								"state",
-								"MG"
+								"SP"
 							]
 						}
 					},
