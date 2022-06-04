@@ -201,6 +201,12 @@ namespace InMemoryEFCore.Utils
                     },
                     new ImageModel()
                     {
+                        id = 61,
+                        nome = "Arroz",
+                        url = "https://cdn.noticiasagricolas.com.br/dbimagens/6a676f00802645a8d39187ad991c8af8.JPG"
+                    },
+                    new ImageModel()
+                    {
                         id = 62,
                         nome = "Feijão",
                         url = "https://blog.aegro.com.br/wp-content/uploads/2020/04/plantio-de-feijao.jpg"
