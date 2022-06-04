@@ -84,7 +84,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/smartagro/stateImage/1",
+							"raw": "https://localhost:5001/smartagro/image/state/1",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -92,7 +92,8 @@
 							"port": "5001",
 							"path": [
 								"smartagro",
-								"stateImage",
+								"image",
+								"state",
 								"1"
 							]
 						}

@@ -26,33 +26,24 @@ namespace InMemoryEFCore.Controllers
             {
                 try {
 
-                    senha = Utils.ExtensionsMethods.DecodeBase64(senha);
-
                     if (String.IsNullOrEmpty(name) || String.IsNullOrEmpty(senha))
                         return BadRequest();
-                    else
-                    {
-                        UserLoginModel userLogin = new UserLoginModel();
-                        UserLoginModel userLoginTeste = new UserLoginModel();
+                    
+                    senha = ExtensionsMethods.DecodeBase64(senha);
 
-                        userLogin.name = name;
-                        userLogin.senha = senha;
+                    UserLoginModel userLoginTeste = new UserLoginModel();
                     
-                        userLoginTeste = _context.UserLogin.FirstOrDefault(usert => usert.name == name);
-                    if (userLogin.senha == userLoginTeste.senha)
-                    {
+                    userLoginTeste = _context.UserLogin.FirstOrDefault(usert => usert.name == name);
+
+                    if (!userLoginTeste.Equals(null) && senha == userLoginTeste.senha)
                         return new UserReturnModel(userLoginTeste.id, userLoginTeste.name);
-                    }
-                    else 
-                    {
-                        return Unauthorized();
-                    }
-                    
-                    }
-                    }
-                catch (Exception e) {
+
+                }
+                catch (Exception e) 
+                {
                     Console.WriteLine(e);
                 }
+
                 return Unauthorized();
             }
 

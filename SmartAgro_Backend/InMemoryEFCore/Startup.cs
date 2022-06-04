@@ -22,7 +22,17 @@ namespace InMemoryEFCore
         {
             services.AddDbContext<UserLoginDBContext>(options => options.UseInMemoryDatabase(databaseName: "UserLogin"));
             services.AddDbContext<ImageDBContext>(options => options.UseInMemoryDatabase(databaseName: "Images"));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddCors(options => 
+            {
+                options.AddPolicy("CorsPolicy", builder => builder
+                    .AllowAnyOrigin()    
+                    .AllowAnyMethod()    
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +49,9 @@ namespace InMemoryEFCore
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors("CorsPolicy");
+
             app.UseMvc();
         }
     }
