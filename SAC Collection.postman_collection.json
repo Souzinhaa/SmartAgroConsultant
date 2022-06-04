@@ -38,6 +38,16 @@
 								{
 									"key": "senha",
 									"value": "Y29yYmFob21p"
+								},
+								{
+									"key": "name",
+									"value": "123",
+									"disabled": true
+								},
+								{
+									"key": "senha",
+									"value": "123",
+									"disabled": true
 								}
 							]
 						}
@@ -84,7 +94,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/smartagro/image/state/1",
+							"raw": "https://localhost:5001/smartagro/image/state/MG",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -94,7 +104,7 @@
 								"smartagro",
 								"image",
 								"state",
-								"1"
+								"MG"
 							]
 						}
 					},
@@ -106,7 +116,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/smartagro/image/cultivars/101",
+							"raw": "https://localhost:5001/smartagro/image/cultivars/62",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -116,7 +126,7 @@
 								"smartagro",
 								"image",
 								"cultivars",
-								"101"
+								"62"
 							]
 						}
 					},

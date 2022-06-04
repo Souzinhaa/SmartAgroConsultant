@@ -35,7 +35,7 @@ namespace InMemoryEFCore.Controllers
                     
                     userLoginTeste = _context.UserLogin.FirstOrDefault(usert => usert.name == name);
 
-                    if (!userLoginTeste.Equals(null) && senha == userLoginTeste.senha)
+                    if (userLoginTeste != null && senha == userLoginTeste.senha)
                         return new UserReturnModel(userLoginTeste.id, userLoginTeste.name);
 
                 }
