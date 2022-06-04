@@ -21,18 +21,17 @@ namespace InMemoryEFCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<UserLoginDBContext>(options => options.UseInMemoryDatabase(databaseName: "UserLogin"));
-            services.AddDbContext<StateImageDBContext>(options => options.UseInMemoryDatabase(databaseName: "StateImage"));
+            services.AddDbContext<ImageDBContext>(options => options.UseInMemoryDatabase(databaseName: "Images"));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddCors(options =>
+            services.AddCors(options => 
             {
                 options.AddPolicy("CorsPolicy", builder => builder
-                .AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .AllowCredentials()
-                );
+                    .AllowAnyOrigin()    
+                    .AllowAnyMethod()    
+                    .AllowAnyHeader()
+                    .AllowCredentials());
             });
         }
 
@@ -50,7 +49,9 @@ namespace InMemoryEFCore
             }
 
             app.UseHttpsRedirection();
+
             app.UseCors("CorsPolicy");
+
             app.UseMvc();
         }
     }

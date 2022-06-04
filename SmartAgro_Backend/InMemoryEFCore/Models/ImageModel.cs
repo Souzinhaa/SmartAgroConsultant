@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace InMemoryEFCore.Models
 {
-    public class StateImageModel
+    public class ImageModel
     {
         public int id { get; set; }
         public string nome { get; set; }

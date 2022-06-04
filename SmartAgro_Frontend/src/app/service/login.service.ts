@@ -8,7 +8,7 @@ import { ClientModel } from '../model/cliente.model';
 })
 export class LoginService {
 
-  url = 'https://localhost:5001'
+  url = 'https://localhost:5001/smartagro'
 
   constructor(private http: HttpClient) { } 
   
@@ -16,8 +16,8 @@ export class LoginService {
     let headers = new HttpHeaders()
     headers = headers.set('Access-Control-Allow-Origin', '*');
     headers = headers.set('content-type', 'application/json');
-    console.log(this.http.get<ClientModel>(`${this.url}/smartagro/userLogin?name=${login}&senha=${senha}`,{ headers }))
+    console.log(this.http.get<ClientModel>(`${this.url}/userLogin?name=${login}&senha=${senha}`,{ headers }))
     
-    return this.http.get<ClientModel>(`${this.url}${login}&${senha}`,{ headers })
+    return this.http.get<ClientModel>(`${this.url}/userLogin?name=${login}&senha=${senha}`,{ headers })
   }
 }

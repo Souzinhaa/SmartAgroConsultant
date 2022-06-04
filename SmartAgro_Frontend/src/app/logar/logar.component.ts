@@ -1,4 +1,9 @@
+import { LoginService } from './../service/login.service';
 import { Component, OnInit } from '@angular/core';
+import { LoginModel } from '../model/login.model';
+import { Router } from '@angular/router';
+import { ClientModel } from '../model/cliente.model';
+
 
 @Component({
   selector: 'app-logar',
@@ -7,9 +12,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogarComponent implements OnInit {
 
-  constructor() { }
+  login: LoginModel = {email: "", senha: ""}
+  cliente: ClientModel = {}
 
-  ngOnInit(): void {
+  constructor(private LoginService: LoginService, private router: Router) { }
+
+  ngOnInit(): void { }
+
+  entrar(): void{
+
+    //var string = 'Hello World!';
+    // Encode the String
+    //var encodedString = btoa(string); 
+    //console.log(encodedString); // Outputs: "SGVsbG8gV29ybGQh"  
+    // Decode the String
+    //var decodedString = atob('encodedString');
+    //console.log(decodedString); // Outputs: "Hello World!"
+    
+    this.LoginService.entrar(this.login.email, btoa(this.login.senha)).subscribe(cliente => {
+      this.cliente = cliente
+      console.log(cliente)
+    });
   }
 
 }

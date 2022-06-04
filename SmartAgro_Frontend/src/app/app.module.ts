@@ -6,12 +6,10 @@ import { AppComponent } from './app.component';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import { MenuComponent } from './menu/menu.component';
-import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LogarComponent } from './logar/logar.component';
 import {AccordionModule} from 'primeng/accordion';
-import {MenuItem} from 'primeng/api'; 
 import {PasswordModule} from 'primeng/password';
 import {MenuModule} from 'primeng/menu';
 import {DividerModule} from 'primeng/divider';
@@ -29,7 +27,6 @@ import { AdubacaoComponent } from './adubacao/adubacao.component';
   declarations: [
     AppComponent,
     MenuComponent,
-    LoginComponent,
     LogarComponent,
     FuncoesComponent,
     HeaderComponent,
