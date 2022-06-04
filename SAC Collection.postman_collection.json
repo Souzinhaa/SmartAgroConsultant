@@ -91,7 +91,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"brunao\",\r\n    \"senha\":\"brunohomi\"\r\n}",
+							"raw": "{\r\n    \"nome\": \"Bruno Souza\",\r\n    \"nomeUsuario\": \"brunao\",\r\n    \"email\":\"souza.brunao008@outlook.com\",\r\n    \"senha\":\"brunohomi\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -99,7 +99,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:5001/smartagro/userLogin",
+							"raw": "https://localhost:5001/smartagro/user/new",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -107,7 +107,8 @@
 							"port": "5001",
 							"path": [
 								"smartagro",
-								"userLogin"
+								"user",
+								"new"
 							]
 						}
 					},
@@ -167,6 +168,36 @@
 		{
 			"name": "Farm",
 			"item": [
+				{
+					"name": "New Farm",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"userId\": 1,\r\n    \"hectares\": 10,\r\n    \"localizacao\": \"45.40338, 20.17403\",\r\n    \"tipoSolo\": \"Argiloso\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/smartagro/farm/new",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"smartagro",
+								"farm",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
 				{
 					"name": "Farm",
 					"request": {

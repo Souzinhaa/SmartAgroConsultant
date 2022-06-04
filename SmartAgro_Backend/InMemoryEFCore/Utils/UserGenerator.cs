@@ -28,13 +28,13 @@ namespace InMemoryEFCore.Utils
                         id = 1,
                         name = "fecorba",
                         senha = "corbahomi"
-                    },
+                    }/*,
                     new UserLoginModel()
                     {
                         id = 2,
                         name = "hyanvin",
                         senha = "hyangay"
-                    });
+                    }*/);
 
                 context.UserDef.AddRange(
                     new UserDefModel()
@@ -44,7 +44,7 @@ namespace InMemoryEFCore.Utils
                         email = "felipecorbanezi@alunos.fho.edu.br",
                         visibilidade = true,
                         login = false
-                    },
+                    }/*,
                     new UserDefModel()
                     {
                         id = 2,
@@ -52,10 +52,10 @@ namespace InMemoryEFCore.Utils
                         email = "hyan@alunos.fho.edu.br",
                         visibilidade = false,
                         login = false
-                    });
+                    }*/);
 
                 context.FarmUser.AddRange(
-                    new FarmModel()
+                    /*new FarmModel()
                     {
                         id = 1,
                         userId = 1,
@@ -70,7 +70,7 @@ namespace InMemoryEFCore.Utils
                         hectares = 15,
                         localizacao = "44.032338, 12.17403",
                         tipoSolo = "Úmido"
-                    });
+                    }*/);
 
                 context.SaveChanges();
             }

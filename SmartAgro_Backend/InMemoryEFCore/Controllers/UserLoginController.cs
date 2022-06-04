@@ -36,7 +36,7 @@ namespace InMemoryEFCore.Controllers
                     userLogin = _context.UserLogin.FirstOrDefault(usert => usert.name == name);
 
                     if (userLogin != null && senha == userLogin.senha) {
-                        UserDefModel user = _context.UserDef.FirstOrDefault(usert => usert.id == userLogin.id);
+                        UserDefModel user = GetUserLogin(userLogin.id);
                         user.login = true;
                         _context.SaveChangesAsync();
                         return user;
@@ -61,7 +61,7 @@ namespace InMemoryEFCore.Controllers
                         int idInt = Int32.Parse(ExtensionsMethods.DecodeBase64(id));
                         nome = ExtensionsMethods.DecodeBase64(nome);
 
-                        UserDefModel user = _context.UserDef.FirstOrDefault(usert => usert.id == idInt);
+                        UserDefModel user = GetUserLogin(idInt);
 
                         if (user != null && user.nome == nome) {
                             user.login = false;
@@ -94,6 +94,34 @@ namespace InMemoryEFCore.Controllers
 
                 return CreatedAtAction(nameof(Get), new { user.id }, user);
             }
+            [HttpPost("user/new")]
+            public async Task<ActionResult<UserDefModel>> Post(NewUserModel nUser)
+            {
+
+                //Console.WriteLine(_context.UserDef.Count());
+                
+                UserDefModel user = new UserDefModel();
+                user.id = _context.UserDef.Count()+1;
+
+
+                user.nome = nUser.nome;
+                user.email = nUser.email;
+                user.visibilidade = true;
+                user.login = true;
+
+                UserLoginModel lUser = new UserLoginModel();
+                lUser.id = user.id;
+                lUser.name = nUser.nomeUsuario;
+                lUser.senha = nUser.senha;
+                
+
+                _context.UserDef.Add(user);
+                _context.UserLogin.Add(lUser);
+            
+                await _context.SaveChangesAsync();
+
+                return CreatedAtAction(nameof(GetUserLogin), new { user.id }, user);
+            }
 
             //Farm
             [HttpGet("farm/{id}")]
@@ -101,15 +129,10 @@ namespace InMemoryEFCore.Controllers
             {
                 try
                 {
-                    
                     if(id != null) { 
                         int idUser = Int32.Parse(ExtensionsMethods.DecodeBase64(id));
 
-                        UserDefModel user = _context.UserDef.FirstOrDefault(usert => usert.id == idUser);
-
-                        Console.WriteLine("Usuario logado: " + user.login);
-
-                        if (user.login) { 
+                        if (GetUserSession(idUser)) { 
                             FarmModel farm = _context.FarmUser.FirstOrDefault(farmt => farmt.userId == idUser);
                             if (farm != null)
                                 return farm;
@@ -125,6 +148,54 @@ namespace InMemoryEFCore.Controllers
                     Console.WriteLine(e);
                 }
                 return BadRequest();
+            }
+            [HttpPost("farm/new")]
+            public async Task<ActionResult<FarmModel>> PostFarm(FarmModel farm)
+            {
+                try
+                {
+                    if (farm != null)
+                    {
+
+                        if (farm.id != null)
+                        {
+
+                            if (GetUserSession(farm.id)) {
+
+                                _context.FarmUser.Add(farm);
+
+                                await _context.SaveChangesAsync();
+
+                                return CreatedAtAction(nameof(GetFarm), new { farm.id }, farm);
+                            }
+
+                    }
+
+                        return Unauthorized();
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+                return BadRequest();
+            }
+
+            public UserDefModel GetUserLogin(int idUser)
+            {
+                UserDefModel user = _context.UserDef.FirstOrDefault(uset => uset.id == idUser);
+
+                if (user != null)
+                    return user;
+
+                return null;
+            }
+
+            public bool GetUserSession(int idUser)
+            {
+                UserDefModel user = _context.UserDef.FirstOrDefault(uset => uset.id == idUser);
+
+                return user.login;
             }
 
     }
