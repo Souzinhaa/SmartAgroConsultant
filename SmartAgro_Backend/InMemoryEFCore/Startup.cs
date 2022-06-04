@@ -21,8 +21,7 @@ namespace InMemoryEFCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<UserLoginDBContext>(options => options.UseInMemoryDatabase(databaseName: "UserLogin"));
-            services.AddDbContext<StateImageDBContext>(options => options.UseInMemoryDatabase(databaseName: "StateImage"));
-
+            services.AddDbContext<ImageDBContext>(options => options.UseInMemoryDatabase(databaseName: "Images"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

@@ -98,6 +98,28 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Cultivars Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/smartagro/image/cultivars/101",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"smartagro",
+								"image",
+								"cultivars",
+								"101"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
