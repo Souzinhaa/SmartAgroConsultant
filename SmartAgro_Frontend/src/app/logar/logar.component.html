@@ -1,11 +1,12 @@
-<app-header [cliente]="cliente"></app-header>
 <div class="geral">
 	<div class="tela_login">
 		<div class="login">
 			<img src="assets/img/logo4.png" alt="" class="img">
 			<input type="text" class="login_usu" [(ngModel)]="login.email" name="email" id="email" #email="ngModel" placeholder="Nome de Usuário" aria-required="true">
 			<input type="password" class="senha_usu" [(ngModel)]="login.senha" name="senha" id="senha" #senha="ngModel" placeholder="Senha de Usuário" aria-required="true">
-			<button type="submit" class="btn btn-primary btn-sm" (click)="entrar()">Login</button>
+			<button type="submit" class="btn btn-primary btn-sm" (click)="entrar()">Entrar</button>
+			<p class="criarlogin"><a href="criarconta">Não possui uma conta? Crie agora!</a></p>
 		</div>
+		
 	</div>	
 </div>
