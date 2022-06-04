@@ -15,7 +15,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/smartagro/userLogin?name=fecorba&senha=Y29yYmFob21p",
+							"raw": "https://localhost:5001/smartagro/login?name=fecorba&senha=Y29yYmFob21p",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -23,7 +23,7 @@
 							"port": "5001",
 							"path": [
 								"smartagro",
-								"userLogin"
+								"login"
 							],
 							"query": [
 								{
@@ -48,6 +48,36 @@
 									"key": "senha",
 									"value": "123",
 									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/smartagro/logout?id=MQ==&nome=RmVsaXBlIENvcmJhbmV6aQ==",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"smartagro",
+								"logout"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "MQ=="
+								},
+								{
+									"key": "nome",
+									"value": "RmVsaXBlIENvcmJhbmV6aQ=="
 								}
 							]
 						}
@@ -127,6 +157,32 @@
 								"image",
 								"cultivars",
 								"62"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Farm",
+			"item": [
+				{
+					"name": "Farm",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/smartagro/farm/MQ==",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"smartagro",
+								"farm",
+								"MQ=="
 							]
 						}
 					},

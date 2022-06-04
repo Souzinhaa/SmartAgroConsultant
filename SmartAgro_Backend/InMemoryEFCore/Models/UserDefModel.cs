@@ -11,5 +11,6 @@ namespace InMemoryEFCore.Models
         public string nome { get; set; }
         public string email { get; set; }
         public bool visibilidade { get; set; }
+        public bool login { get; set; }
     }
 }

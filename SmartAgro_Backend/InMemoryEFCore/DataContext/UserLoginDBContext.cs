@@ -15,5 +15,6 @@ namespace InMemoryEFCore.DataContext
 
         public DbSet<UserLoginModel> UserLogin { get; set; }
         public DbSet<UserDefModel> UserDef { get; set; }
+        public DbSet<FarmModel> FarmUser { get; set; }
     }
 }
