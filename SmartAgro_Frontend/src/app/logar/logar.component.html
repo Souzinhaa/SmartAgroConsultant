@@ -8,10 +8,10 @@
 				<button type="submit" class="btn btn-outline-success botaologin" (click)="entrar()">Entrar</button>
 				<p class="criarlogin"><a href="criarconta">Não possui uma conta? Crie agora!</a></p>
 			</div>
-			
 		</div>	
 	</div>
 </div>
 <div *ngIf="clienteLogin.id != 0 && clienteLogin.id != null">
 	<app-header [clienteHeader]="clienteLogin" [menu]="true"></app-header>
+	<app-menu></app-menu>
 </div>
