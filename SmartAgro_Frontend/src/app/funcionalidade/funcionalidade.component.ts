@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ClientModel } from '../model/cliente.model';
 
 @Component({
   selector: 'app-funcionalidade',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./funcionalidade.component.scss']
 })
 export class FuncionalidadeComponent implements OnInit {
+
+  @Input() clienteFuncionalidade: ClientModel = {}
 
   constructor() { }
 

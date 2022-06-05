@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AdubacaoModel, FormulacoesModel } from '../model/adubacao.model';
+import { ClientModel } from '../model/cliente.model';
 import { AdubacaoService } from '../service/adubacao.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { AdubacaoService } from '../service/adubacao.service';
 export class AdubacaoComponent implements OnInit {
   
   adubacaoEmbrapa: AdubacaoModel = {data: {}}
+  @Input() clienteAdubacao: ClientModel = {}
 
   constructor(private AdubacaoService: AdubacaoService) { }
 

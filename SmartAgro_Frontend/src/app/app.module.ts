@@ -22,6 +22,8 @@ import { ZoneamentoComponent } from './zoneamento/zoneamento.component';
 import { FuncionalidadeComponent } from './funcionalidade/funcionalidade.component';
 import { LinhaComponent } from './linha/linha.component';
 import { AdubacaoComponent } from './adubacao/adubacao.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { CriarcontaComponent } from './criarconta/criarconta.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { AdubacaoComponent } from './adubacao/adubacao.component';
     ZoneamentoComponent,
     FuncionalidadeComponent,
     LinhaComponent,
-    AdubacaoComponent
+    AdubacaoComponent,
+    PerfilComponent,
+    CriarcontaComponent
   ],
   imports: [
     PasswordModule,

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ClientModel } from '../model/cliente.model';
 import { ZoneamentoModel } from '../model/zoneamento.model';
 import { ZoneamentoService } from '../service/zoneamento.service';
 
@@ -10,6 +11,7 @@ import { ZoneamentoService } from '../service/zoneamento.service';
 export class ZoneamentoComponent implements OnInit {
   
   zoneamentosEmbrapa:ZoneamentoModel = {data: [{}]}
+  @Input() clienteZoneamento: ClientModel = {}
 
   constructor(private zoneamentoService: ZoneamentoService) { }
 
