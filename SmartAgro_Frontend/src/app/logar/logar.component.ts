@@ -12,8 +12,9 @@ import { Router } from '@angular/router';
 })
 export class LogarComponent implements OnInit {
 
-  login: LoginModel = {email: "", senha: ""}
+  login: LoginModel = {email: "fecorba", senha: "corbahomi"}
   clienteLogin: ClientModel = {}
+  
 
   constructor(private LoginService: LoginService, private router: Router) { }
 

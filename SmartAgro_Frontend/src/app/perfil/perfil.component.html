@@ -1,4 +1,3 @@
-<app-header></app-header> 
 <main class="menu-produtividade">     
     <div class="form-style-10">         
         <h1>Meu Perfil</h1>         
@@ -6,11 +5,10 @@
             <div class="section"><span>1</span>Informações
             </div>             
             <div class="inner-wrap">                 
-                <p>Nome:</p>                 
-                <br>                 
-                <p>Nome de Usuario:</p>                
-                 <br>                 
-                 <p>Email:</p>             
+                <p>ID: {{clientePerfil.id}}</p>
+                <p>Nome: {{clientePerfil.nome}}</p>
+                <p>Email: {{clientePerfil.email}}</p> 
+                <p>Compartilha dados: {{clientePerfil.visibilidade}}</p> 
                 </div>              
                 <div class="section"><span>2</span>Informações Do Seu Plantio</div>             
                 <div class="Col-3">                 
@@ -29,4 +27,3 @@
                         <br>    
                      </div> 
                     </main> 
-<app-footer></app-footer>

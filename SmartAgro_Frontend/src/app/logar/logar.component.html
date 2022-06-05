@@ -13,5 +13,5 @@
 	</div>
 </div>
 <div *ngIf="clienteLogin.id != 0 && clienteLogin.id != null">
-	<app-menu [clienteMenu]="clienteLogin"></app-menu>
+	<app-header [clienteHeader]="clienteLogin" [menu]="true"></app-header>
 </div>

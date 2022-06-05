@@ -14,7 +14,7 @@ const routes: Routes = [
     path: "",
     component: LogarComponent
   },
-  {
+  /*{
     path: "menu",
     component: MenuComponent
   },
@@ -37,7 +37,7 @@ const routes: Routes = [
   {
     path: "perfil",
     component: PerfilComponent
-  },
+  },*/
   {
     path: "criarconta",
     component: CriarcontaComponent
