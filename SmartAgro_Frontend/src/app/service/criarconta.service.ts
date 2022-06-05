@@ -26,10 +26,11 @@ export class CriarcontaService {
   
   constructor(private http: HttpClient) { } 
   
-  criarusu(login: CriarcontaModel): Observable<ClientModel>{
+  criarUsuario(login: CriarcontaModel): Observable<ClientModel>{
     let headers = new HttpHeaders()
     headers = headers.set('Access-Control-Allow-Origin', '*');
     headers = headers.set('content-type', 'application/json');
-    return this.http.get<CriarcontaModel>(`${this.url}/userLogin?email=${login.email}&senha=${login.senha}&nomeusu=${login.nomeusu}&nome=${login.nome}`,{ headers })
+    //return this.http.post<CriarcontaModel>(`${this.url}/userLogin?email=${login.email}&senha=${login.senha}&nomeusu=${login.nomeusu}&nome=${login.nome}`,{ headers })
+    return this.http.post<CriarcontaModel>(this.url, login)  
   }
 }
