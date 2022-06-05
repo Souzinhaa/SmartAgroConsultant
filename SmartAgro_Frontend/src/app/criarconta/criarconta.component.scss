@@ -24,7 +24,7 @@
 
 .tela_login{
 	width: 40%;
-	height: auto;
+	height: 700px;
 	background-color: rgba(0,0,0,0.3);
 	margin: 70px auto;
 	top: 30px;
@@ -87,7 +87,7 @@
     font-size: 13px;
     align-items: center;
     position: relative;
-    margin-top: -50px;
+	margin-top: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
 .Login_label{
@@ -105,10 +105,8 @@
 	width: 200px;;
 
 }
-.btn{
-	font-size: 24px;
-	margin: 10%;
-	height: 40px;
-	width: 50%;
-	background-color: #8ecf7a
+.botaologin{
+	width: 70% !important;
+	margin-top: 40px;
+	font-size: 18px;
 }

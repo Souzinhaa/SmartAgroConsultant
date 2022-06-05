@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { CriarcontaModel } from '../model/criarconta.model';
+import { CriarContaModel } from '../model/criarconta.model';
 import { ClientModel } from '../model/cliente.model';
 import { Router } from '@angular/router';
 import { CriarcontaService } from '../service/criarconta.service';
@@ -12,7 +12,7 @@ import { CriarcontaService } from '../service/criarconta.service';
 })
 export class CriarcontaComponent implements OnInit {
 
-  criarconta: CriarcontaModel = {nome: "",nomeusu:"",email: "", senha: ""}
+  criarconta: CriarContaModel = {nome: "",nomeusu:"",email: "", senha: ""}
   cliente: ClientModel = {}
 
   constructor(private CriarcontaService: CriarcontaService, private router: Router) { }
@@ -29,9 +29,9 @@ export class CriarcontaComponent implements OnInit {
       }, e => {
         alert(this.CriarcontaService.erro(e.status))
       })
-    else if(this.criarconta.nome == "")
+    else if(this.criarconta.nome === "")
     alert("Preencha o Nome de usuário!!")
-    else if(this.criarconta.nomeusu == "")
+    else if(this.criarconta.nomeusu === "")
       alert("Preencha o Apelido de usuário!!")
     else if(this.criarconta.email == "")
       alert("Preencha o e-mail de usuário!!")

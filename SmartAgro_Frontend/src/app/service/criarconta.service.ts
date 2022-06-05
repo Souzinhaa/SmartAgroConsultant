@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ClientModel } from '../model/cliente.model';
-import { CriarcontaModel } from '../model/criarconta.model';
+import { CriarContaModel } from '../model/criarconta.model';
 
 @Injectable({
   providedIn: 'root'
@@ -26,11 +26,11 @@ export class CriarcontaService {
   
   constructor(private http: HttpClient) { } 
   
-  criarUsuario(login: CriarcontaModel): Observable<ClientModel>{
+  criarUsuario(login: CriarContaModel): Observable<ClientModel>{
     let headers = new HttpHeaders()
     headers = headers.set('Access-Control-Allow-Origin', '*');
     headers = headers.set('content-type', 'application/json');
     //return this.http.post<CriarcontaModel>(`${this.url}/userLogin?email=${login.email}&senha=${login.senha}&nomeusu=${login.nomeusu}&nome=${login.nome}`,{ headers })
-    return this.http.post<CriarcontaModel>(this.url, login)  
+    return this.http.post<CriarContaModel>(this.url, login)  
   }
 }
