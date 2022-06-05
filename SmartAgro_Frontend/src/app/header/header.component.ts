@@ -8,7 +8,7 @@ import { ClientModel } from '../model/cliente.model';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() cliente: ClientModel = {}
+  @Input() clienteHeader: ClientModel = {}
   constructor() { }
 
   ngOnInit(): void {

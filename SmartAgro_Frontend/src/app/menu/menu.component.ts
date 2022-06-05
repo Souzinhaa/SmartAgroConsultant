@@ -10,8 +10,7 @@ export class MenuComponent implements OnInit {
 
 
   login: boolean = true;
-  cliente: ClientModel = {nome: "erro"}
-
+  @Input() clienteMenu: ClientModel = {}
   constructor() { }
 
   ngOnInit(): void {

@@ -13,8 +13,7 @@ import { Router } from '@angular/router';
 export class LogarComponent implements OnInit {
 
   login: LoginModel = {email: "", senha: ""}
-  cliente: ClientModel = {}
-  @Output() dadosCliente = new EventEmitter<string>(); //  @Output(alias) propertyName = ...
+  clienteLogin: ClientModel = {}
 
   constructor(private LoginService: LoginService, private router: Router) { }
 
@@ -24,10 +23,7 @@ export class LogarComponent implements OnInit {
     this.login.senha = btoa(this.login.senha)
     if(this.login.email != "" && this.login.senha != "")
       this.LoginService.entrar(this.login).subscribe(cliente => {
-        this.cliente = cliente
-        this.dadosCliente.emit("Deu Certo");
-        this.router.navigate(['/menu']);
-
+        this.clienteLogin = cliente
       }, e => {
         alert(this.LoginService.erro(e.status))
       })
