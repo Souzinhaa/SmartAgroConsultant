@@ -10,7 +10,7 @@ namespace InMemoryEFCore.Controllers
 {
     [Route("smartagro/image")]
     [ApiController]
-    public class ImageController
+    public class ImageController : ControllerBase
     {
         private ImageDBContext _context;
 
@@ -20,10 +20,18 @@ namespace InMemoryEFCore.Controllers
         }
 
         // GET api/stateImage/1git 
-        [HttpGet("state/{id}")]
-        public ActionResult<ImageModel> GetState(int id)
+        [HttpGet("state/{uf}")]
+        public ActionResult<ImageModel> GetState(string uf)
         {
-            return _context.StateImage.FirstOrDefault(usert => usert.id == id);   
+            try{ 
+                ImageModel img = _context.StateImage.FirstOrDefault(imgt => imgt.nome == uf);
+                if (img != null)
+                    return img;
+            } catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            return BadRequest();   
         }
 
         [HttpGet("cultivars/{id}")]

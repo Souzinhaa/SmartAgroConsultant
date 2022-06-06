@@ -15,7 +15,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/smartagro/userLogin?name=fecorba&senha=Y29yYmFob21p",
+							"raw": "https://localhost:5001/smartagro/login?name=fecorba&senha=Y29yYmFob21p",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -23,7 +23,7 @@
 							"port": "5001",
 							"path": [
 								"smartagro",
-								"userLogin"
+								"login"
 							],
 							"query": [
 								{
@@ -38,6 +38,46 @@
 								{
 									"key": "senha",
 									"value": "Y29yYmFob21p"
+								},
+								{
+									"key": "name",
+									"value": "123",
+									"disabled": true
+								},
+								{
+									"key": "senha",
+									"value": "123",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/smartagro/logout?id=MQ==&nome=RmVsaXBlIENvcmJhbmV6aQ==",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"smartagro",
+								"logout"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "MQ=="
+								},
+								{
+									"key": "nome",
+									"value": "RmVsaXBlIENvcmJhbmV6aQ=="
 								}
 							]
 						}
@@ -51,7 +91,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"brunao\",\r\n    \"senha\":\"brunohomi\"\r\n}",
+							"raw": "{\r\n    \"nome\": \"Bruno Souza\",\r\n    \"nomeUsuario\": \"brunao\",\r\n    \"email\":\"souza.brunao008@outlook.com\",\r\n    \"senha\":\"brunohomi\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -59,7 +99,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:5001/smartagro/userLogin",
+							"raw": "https://localhost:5001/smartagro/user/new",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -67,7 +107,8 @@
 							"port": "5001",
 							"path": [
 								"smartagro",
-								"userLogin"
+								"user",
+								"new"
 							]
 						}
 					},
@@ -84,7 +125,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/smartagro/image/state/1",
+							"raw": "https://localhost:5001/smartagro/image/state/SP",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -94,7 +135,7 @@
 								"smartagro",
 								"image",
 								"state",
-								"1"
+								"SP"
 							]
 						}
 					},
@@ -106,7 +147,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5001/smartagro/image/cultivars/101",
+							"raw": "https://localhost:5001/smartagro/image/cultivars/62",
 							"protocol": "https",
 							"host": [
 								"localhost"
@@ -116,7 +157,63 @@
 								"smartagro",
 								"image",
 								"cultivars",
-								"101"
+								"62"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Farm",
+			"item": [
+				{
+					"name": "New Farm",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"userId\": 1,\r\n    \"hectares\": 10,\r\n    \"localizacao\": \"45.40338, 20.17403\",\r\n    \"tipoSolo\": \"Argiloso\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/smartagro/farm/new",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"smartagro",
+								"farm",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Farm",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/smartagro/farm/MQ==",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"smartagro",
+								"farm",
+								"MQ=="
 							]
 						}
 					},
