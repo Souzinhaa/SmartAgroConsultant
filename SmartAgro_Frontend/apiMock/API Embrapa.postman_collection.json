@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "186a781e-34e9-43ba-9355-780454bfc6f9",
+		"name": "API Embrapa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Verifica Saúde",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlLocal}}/health",
+					"host": [
+						"{{urlLocal}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista de Culturas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlLocal}}/culturas",
+					"host": [
+						"{{urlLocal}}"
+					],
+					"path": [
+						"culturas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cultura por ID",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlLocal}}/culturas/{{id}}",
+					"host": [
+						"{{urlLocal}}"
+					],
+					"path": [
+						"culturas",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cultivares por ID e UF",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlLocal}}/cultivares?safra=2017-2018&dataAtualizacao=2018-01-01&idCultura={{id}}&uf={{uf}}",
+					"host": [
+						"{{urlLocal}}"
+					],
+					"path": [
+						"cultivares"
+					],
+					"query": [
+						{
+							"key": "safra",
+							"value": "2017-2018"
+						},
+						{
+							"key": "dataAtualizacao",
+							"value": "2018-01-01"
+						},
+						{
+							"key": "idCultura",
+							"value": "{{id}}"
+						},
+						{
+							"key": "uf",
+							"value": "{{uf}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zoneamento por ID e CodIBGE",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlLocal}}/zoneamento?idCultura={{id}}&codigoIBGE={{codIBGE}}",
+					"host": [
+						"{{urlLocal}}"
+					],
+					"path": [
+						"zoneamento"
+					],
+					"query": [
+						{
+							"key": "idCultura",
+							"value": "{{id}}"
+						},
+						{
+							"key": "codigoIBGE",
+							"value": "{{codIBGE}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Zoneamento por ID e CodIBGE Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlLocal}}/adubacao/recomendacao?idCultura={{id}}&expectativaProdutividade=1&identificadorMetodoExtracaoFosforo=1&identificadorClasseTexturalSolo=1&capacidadeTrocaCation=10&fosforo=10&potassio=200&materiaOrganica=50&teorArgila=400&saturacaoPorBases=30&prntCalcario=80",
+					"host": [
+						"{{urlLocal}}"
+					],
+					"path": [
+						"adubacao",
+						"recomendacao"
+					],
+					"query": [
+						{
+							"key": "idCultura",
+							"value": "{{id}}"
+						},
+						{
+							"key": "expectativaProdutividade",
+							"value": "1"
+						},
+						{
+							"key": "identificadorMetodoExtracaoFosforo",
+							"value": "1"
+						},
+						{
+							"key": "identificadorClasseTexturalSolo",
+							"value": "1"
+						},
+						{
+							"key": "capacidadeTrocaCation",
+							"value": "10"
+						},
+						{
+							"key": "fosforo",
+							"value": "10"
+						},
+						{
+							"key": "potassio",
+							"value": "200"
+						},
+						{
+							"key": "materiaOrganica",
+							"value": "50"
+						},
+						{
+							"key": "teorArgila",
+							"value": "400"
+						},
+						{
+							"key": "saturacaoPorBases",
+							"value": "30"
+						},
+						{
+							"key": "prntCalcario",
+							"value": "80"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "52eea896-fd5e-3fbf-88b9-e1203e5fff49",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "56",
+			"type": "default"
+		},
+		{
+			"key": "uf",
+			"value": "SP",
+			"type": "default"
+		},
+		{
+			"key": "codIBGE",
+			"value": "4200051",
+			"type": "default"
+		},
+		{
+			"key": "urlLocal",
+			"value": "http://localhost:3001",
+			"type": "default"
+		},
+		{
+			"key": "urlEmbrapa",
+			"value": "https://api.cnptia.embrapa.br/agritec/v1",
+			"type": "default"
+		}
+	]
+}

@@ -216,8 +216,7 @@ namespace InMemoryEFCore.Utils
                         id = 32533,
                         nome = "Trigo",
                         url = "https://diarural.com.br/wp-content/uploads/2021/08/trigo-1.jpg"
-                    });
-
+                    })
                 context.SaveChanges();
             }
         }

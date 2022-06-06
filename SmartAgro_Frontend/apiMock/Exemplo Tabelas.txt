@@ -1,0 +1,30 @@
+Tabela usuario:
+- nome : string
+- senha : string
+- login : string
+- email : string
+- token : uuid
+- visibilidade : bool
+
+Tabela produto_fazenda:
+- uuid_usuario: uuid
+- plantas : []Planta
+- tamanho_hectares : Double
+- tipo_solo: int
+- localizacao: String(coordenada google maps)
+
+Tabela tipo_solo:
+- id: int
+- nome: String
+- descricao: String
+
+Tabela historico_fazenda_usuario:
+- uuid_usuario: uuid
+- data_inicio_plantacao: Long
+- data_fim_plantacao: Long
+- planta: Planta
+
+Tabela planta:
+- cod_planta: Int
+- nome: String
+- descricao: String 

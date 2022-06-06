@@ -1,0 +1,92 @@
+<app-header></app-header>
+<main class="menu-produtividade">
+    <div class="form-style-10">
+        <h1>Adubação</h1>
+
+        <form>
+            <div class="section"><span>1</span>Descrição Adubação</div>
+            <div class="inner-wrap">
+                <label>Nome/Descrição<input type="text" name="nome" /></label>
+                <label>Expectativa de produtividade</label>
+                <input type="number" name="exprodutividade" />
+            </div>
+
+            <div class="section"><span>2</span>Informações Adubação</div>
+            <div class="inner-wrap">
+                
+                <label>Identificador do Método extração fósforo
+                    <select>
+                    <option value="valor1"></option>
+                    <option value="valor2">Resina</option>
+                    <option value="valor3">Mehlich</option>
+                  </select></label>
+                  <label>Classe textural do solo
+                    <select>
+                    <option value="valor1"></option>
+                    <option value="valor2">Arenoso</option>
+                    <option value="valor3">Médio</option>
+                    <option value="valor4">Argiloso</option>
+                  </select></label>
+                  <label>Capacidade de troca de cátion - CTC (cmolc/dm3) Domínio: <input type="number" max="20" min="0"/></label>
+                  <label>Fósforo - P2O5 (mg/dm3) Domínio: <input type="number" max="20" min="0"/></label>
+                  <label>Potássio - K (mg/dm3) Domínio: <input type="number" max="50" min="0"/></label>
+                  <label>Matéria orgânica - g/kg Domínio: <input type="number" max="100" min="0"/></label>
+                  <label>Teor de argila - g/kg Domínio: <input type="number" max="100" min="0"/></label>
+                  <label>Saturacao por bases - V (%) Domíńio: <input type="number" max="100" min="0"/></label>
+                  <label>(PRNT) Poder relativo de neutralização total do calcário (%) Domínio: <input type="number" max="100" min="0"/></label>
+            </div>
+        
+            <div class="button-section">
+             <input type="submit" name="Sign Up" />
+             <span class="privacy-policy">
+             <input type="checkbox" name="field7"> Estou de acordo com os termos de política. 
+             </span>
+            </div>
+        </form>
+        <br>
+        <table>
+            
+            <thead>
+                <th class="pro" name="Produtividade Almejada">Interpretação Saturacao Por Bases</th>
+                <th class="pro" name="Produtividade Média">Interpretação Fosforo</th>
+                <th class="pro" name="Temperatura Mínima">Interpretação Potassio</th>
+                <th class="pro" name="Temperatura Máxima">Dose Calcario=</th>
+                <!--<th class="pro" name="Precipitação">Observações Calagem</th>-->
+                <th class="pro" name="Graus Dia">Total Nitrogenio</th>
+                <th class="pro" name="Balanco Hidrico">Total Fósforo</th>
+                <th class="pro" name="Deficiencia Hidric">Total Potássio</th>
+                <th class="pro" name="Deficiencia Hidric">semeaduraPlantioNitrogenio</th>
+                <th class="pro" name="Deficiencia Hidric">semeaduraPlantioFosforo</th>
+                <th class="pro" name="Deficiencia Hidric">semeaduraPlantioPotassio</th>
+                <th class="pro" name="Deficiencia Hidric">coberturaNitrogenio</th>
+                <th class="pro" name="Deficiencia Hidric">composicaoNPK</th>
+                <!--<th class="pro" name="Excedente Hidrico">Observação Adubação</th>-->
+            </thead>
+            <tbody align="center">
+                <tr>
+                    <td class="pro2">{{adubacaoEmbrapa?.data?.interpretacaoSaturacaoPorBases}}</td>
+                    <td class="pro2">{{adubacaoEmbrapa?.data?.interpretacaoFosforo}}</td>
+                    <td class="pro2">{{adubacaoEmbrapa?.data?.interpretacaoPotassio}}</td>
+                    <td class="pro2">{{adubacaoEmbrapa?.data?.doseCalcario}}</td>
+                    <!--<td class="pro2">{{adubacaoEmbrapa?.data?.observacoesCalagem}}</td>-->
+                    <td class="pro2">{{adubacaoEmbrapa?.data?.totalNitrogenio}}</td>
+                    <td class="pro2">{{adubacaoEmbrapa?.data?.totalFosforo}}</td>
+                    <td class="pro2">{{adubacaoEmbrapa?.data?.totalPotassio}}</td>
+                    <td class="pro2">{{adubacaoEmbrapa?.data?.semeaduraPlantioNitrogenio}}</td>
+                    <td class="pro2">{{adubacaoEmbrapa?.data?.semeaduraPlantioFosforo}}</td>
+                    <td class="pro2">{{adubacaoEmbrapa?.data?.semeaduraPlantioPotassio}}</td>
+                    <td class="pro2">{{adubacaoEmbrapa?.data?.coberturaNitrogenio}}</td>
+                    <td class="pro2"><div *ngFor="let formulacao of adubacaoEmbrapa?.data?.formulacoesSugeridas">
+                        <p>Formulação: {{formulacao.composicaoNPK}} - {{formulacao.dose}}</p>
+                    </div></td>
+                    <!--<td class="pro2">{{adubacaoEmbrapa?.data?.observacoesAdubacao}}</td>-->
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tr class="pro2">Observações Calagem: {{adubacaoEmbrapa?.data?.observacoesCalagem}}</tr>
+            <tr class="pro2">Observações Adubaçao: {{adubacaoEmbrapa?.data?.observacoesAdubacao}}</tr>
+        </table>
+    </div>
+</main>
+<app-footer></app-footer>
