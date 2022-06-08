@@ -1,21 +1,48 @@
 <header class="cabecalho">
     <img class="cabecalho-img" src="assets/img/loguinho.png">
     <nav class="cabecalho-menu">
-        <a class="cabecalho-item" href="menu">Página Inicial</a>
-        <a class="cabecalho-item" href="#">Recursos</a>
+        <a class="cabecalho-item" (click)="changeMenu('menu')">Página Inicial</a>
+        <a class="cabecalho-item" (click)="changeMenu('perfil')">Meu Perfil</a>
         <div class="dropdown">
-          <a href="funcionalidade"><button class="btn">Funcionalidades</button></a>
+          <a (click)="changeMenu('funcionalidade')"><button class="btn">Funcionalidades</button></a>
           <div class="dropdown">
             <button class="btn" style="border-left:1px solid navy">
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="produtividade">Produtividade</a>
-              <a href="zoneamento">Zoneamento</a>
-              <a href="adubacao">Adubação</a>
+              <a (click)="changeMenu('produtividade')">Produtividade</a>
+              <a (click)="changeMenu('zoneamento')">Zoneamento</a>
+              <a (click)="changeMenu('adubacao')">Adubação</a>
             </div>
           </div>
-          </div>
+          
+        </div>
+        
+        <label>Bem vind@ {{clienteHeader.nome}}</label>
           
     </nav>
 </header>
+
+<div *ngIf="menu">
+  <app-menu [clienteMenu]="clienteHeader"></app-menu>
+</div>
+
+<div *ngIf="showPerfil">
+  <app-perfil [clientePerfil]="clienteHeader"></app-perfil>
+</div>
+
+<div *ngIf="showFuncionalidade">
+  <app-funcionalidade [clienteFuncionalidade]="clienteHeader"></app-funcionalidade>
+</div>
+
+<div *ngIf="showProdutividade">
+  <app-produtividade [clienteProdutividade]="clienteHeader"></app-produtividade>
+</div>
+
+<div *ngIf="showZoneamento">
+  <app-zoneamento [clienteZoneamento]="clienteHeader"></app-zoneamento>
+</div>
+
+<div *ngIf="showAdubacao">
+  <app-adubacao [clienteAdubacao]="clienteHeader"></app-adubacao>
+</div>

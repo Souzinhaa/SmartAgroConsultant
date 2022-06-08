@@ -1,8 +1,6 @@
 export interface ClientModel {
-    id?: 0; 
-    nome?:  "";
-    senha?:  "";
-    login?:  "";
-    token?:  "";
-    visibilidade?: false;
+    id?: number; 
+    nome?: string;
+    email?: string;
+    visibilidade?: boolean;
 }

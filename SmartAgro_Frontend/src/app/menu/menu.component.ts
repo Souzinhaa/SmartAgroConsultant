@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ClientModel } from '../model/cliente.model';
 
 @Component({
   selector: 'app-menu',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  login: boolean = true;
 
+  login: boolean = true;
+  @Input() clienteMenu: ClientModel = {}
   constructor() { }
 
   ngOnInit(): void {

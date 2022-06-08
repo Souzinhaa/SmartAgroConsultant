@@ -1,14 +1,17 @@
-
+<div *ngIf="clienteLogin.id == 0 || clienteLogin.id == null">
 	<div class="geral">
 		<div class="tela_login">
 			<div class="login">
-                <img src="assets/img/logo4.png" alt="" class="img">
-
-				<input class="login_usu" [(ngModel)]="login.email" name="email" id="email" #email="ngModel" required type="text" placeholder="Nome de Usuário">
-				<input class="senha_usu" [(ngModel)]="login.senha" name="senha" id="senha" #senha="ngModel" required type="password" placeholder="Senha de Usuário">
-
-				<button type="button" class="btn btn-primary btn-sm" (click)="entrar()">Login</button>
+				<img src="assets/img/logo4.png" alt="" class="img">
+				<input type="text" class="login_usu" [(ngModel)]="login.email" name="email" id="email" #email="ngModel" placeholder="Nome de Usuário" aria-required="true">
+				<input type="password" class="senha_usu" [(ngModel)]="login.senha" name="senha" id="senha" #senha="ngModel" placeholder="Senha de Usuário" aria-required="true">
+				<button type="submit" class="btn btn-primary btn-sm" (click)="entrar()">Entrar</button>
+				<p class="criarlogin"><a href="criarconta">Não possui uma conta? Crie agora!</a></p>
 			</div>
-		</div>
-		
+			
+		</div>	
 	</div>
+</div>
+<div *ngIf="clienteLogin.id != 0 && clienteLogin.id != null">
+	<app-header [clienteHeader]="clienteLogin" [menu]="true"></app-header>
+</div>
