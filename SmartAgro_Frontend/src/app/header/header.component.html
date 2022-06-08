@@ -1,8 +1,8 @@
 <header class="cabecalho">
     <img class="cabecalho-img" src="assets/img/loguinho.png">
     <nav class="cabecalho-menu">
-        <a class="cabecalho-item" (click)="changeMenu('menu')">Página Inicial</a>
-        <a class="cabecalho-item" (click)="changeMenu('perfil')">Meu Perfil</a>
+        <a style="color: #fff" class="cabecalho-item" (click)="changeMenu('menu')">Página Inicial</a>
+        <a style="color: #fff" class="cabecalho-item" (click)="changeMenu('perfil')">Meu Perfil</a>
         <div class="dropdown">
           <a (click)="changeMenu('funcionalidade')"><button class="btn">Funcionalidades</button></a>
           <div class="dropdown">
@@ -18,7 +18,7 @@
           
         </div>
         
-        <label>Bem vind@ {{clienteHeader.nome}}</label>
+        <label style="color: #ffffff">Bem vind@ {{clienteHeader.nome}}</label>
           
     </nav>
 </header>

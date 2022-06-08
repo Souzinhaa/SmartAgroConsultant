@@ -9,7 +9,7 @@ import { CriarcontaModel } from '../model/criarconta.model';
 })
 export class CriarcontaService {
 
-  url = 'https://localhost:5001/smartagro'
+  url = 'https://localhost:5001/smartagro/user/new'
 
   erro(codigo: number): String{
     switch (codigo){
@@ -30,6 +30,8 @@ export class CriarcontaService {
     let headers = new HttpHeaders()
     headers = headers.set('Access-Control-Allow-Origin', '*');
     headers = headers.set('content-type', 'application/json');
+    console.log(login)
+    console.log(this.http.post<CriarcontaModel>(this.url, login))
     //return this.http.post<CriarcontaModel>(`${this.url}/userLogin?email=${login.email}&senha=${login.senha}&nomeusu=${login.nomeusu}&nome=${login.nome}`,{ headers })
     return this.http.post<CriarcontaModel>(this.url, login)  
   }

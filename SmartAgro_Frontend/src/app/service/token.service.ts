@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class TokenService {
 
-  token = 'Bearer cac1ae1f-3ff7-3441-bc93-db0921aaae43'
+  token = 'Bearer a15a4cb2-77bb-3f63-a3a0-d483741f0c1f'
 
   constructor() { }
 

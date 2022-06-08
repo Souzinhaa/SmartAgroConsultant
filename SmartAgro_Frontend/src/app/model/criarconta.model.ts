@@ -1,6 +1,6 @@
 export interface CriarcontaModel {
     nome?: string,
-    nomeusu?: string,
+    nomeUsuario?: string,
     email?: string,
     senha?: string
 }

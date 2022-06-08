@@ -32,6 +32,6 @@ export class LoginService {
     let headers = new HttpHeaders()
     headers = headers.set('Access-Control-Allow-Origin', '*');
     headers = headers.set('content-type', 'application/json');
-    return this.http.get<ClientModel>(`${this.url}/userLogin?name=${login.email}&senha=${login.senha}`,{ headers })
+    return this.http.get<ClientModel>(`${this.url}/login?name=${login.email}&senha=${login.senha}`,{ headers })
   }
 }
